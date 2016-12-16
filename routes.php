@@ -10,7 +10,7 @@
  * @namespace artisan/v1
  * @version 1
  */
-Route::group([ 'prefix' => 'artisan/v1' ], function ()
+Route::group([ 'prefix' => 'artisan/v1' ], function()
 {
     /**
      * Run queued commend.
