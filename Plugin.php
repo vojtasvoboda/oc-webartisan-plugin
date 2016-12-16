@@ -17,7 +17,7 @@ class Plugin extends PluginBase
     {
         return [
             'name' => 'Web Artisan',
-            'description' => 'Runs artisan command by URL, curl or wget',
+            'description' => 'Runs artisan commands by URL, curl or wget',
             'author' => 'Vojta Svoboda',
             'icon' => 'icon-forward',
         ];

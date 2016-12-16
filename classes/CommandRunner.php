@@ -7,7 +7,7 @@ use VojtaSvoboda\WebArtisan\Models\Settings;
 class CommandRunner
 {
     /** @var array $allowedCommands List of allowed commands loaded from Config. */
-    protected $allowedCommands = [];
+    protected $allowedCommands;
 
     /** @var Settings $settings */
     protected $settings;

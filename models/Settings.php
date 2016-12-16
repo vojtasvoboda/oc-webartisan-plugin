@@ -8,7 +8,9 @@ class Settings extends Model
 {
     use ValidationTrait;
 
-    public $implement = ['System.Behaviors.SettingsModel'];
+    public $implement = [
+    	'System.Behaviors.SettingsModel',
+    ];
 
     public $settingsCode = 'vojtasvoboda_webartisan_settings';
 

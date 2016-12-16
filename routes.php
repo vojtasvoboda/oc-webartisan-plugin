@@ -10,7 +10,7 @@
  * @namespace artisan/v1
  * @version 1
  */
-Route::group(['prefix' => 'artisan/v1'], function ()
+Route::group([ 'prefix' => 'artisan/v1' ], function ()
 {
     /**
      * Run queued commend.
@@ -19,7 +19,7 @@ Route::group(['prefix' => 'artisan/v1'], function ()
      *
      * @method GET
      */
-    Route::get('queued/{group}/{command}/{hash}', function ($group, $command, $hash)
+    Route::get('queued/{group}/{command}/{hash}', function($group, $command, $hash)
     {
         /** @var \VojtaSvoboda\WebArtisan\Classes\CommandRunner $runner */
         $runner = App::make(\VojtaSvoboda\WebArtisan\Classes\CommandRunner::class);
@@ -36,7 +36,7 @@ Route::group(['prefix' => 'artisan/v1'], function ()
      *
      * @method GET
      */
-    Route::get('{group}/{command}/{hash}', function ($group, $command, $hash)
+    Route::get('{group}/{command}/{hash}', function($group, $command, $hash)
     {
         /** @var \VojtaSvoboda\WebArtisan\Classes\CommandRunner $runner */
         $runner = App::make(\VojtaSvoboda\WebArtisan\Classes\CommandRunner::class);
