@@ -1,5 +1,8 @@
 # Web Artisan plugin for OctoberCMS
 
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5e98d8323ff64df59cb2be7f5db579f4)](https://www.codacy.com/app/vojtasvoboda/oc-webartisan-plugin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vojtasvoboda/oc-webartisan-plugin&amp;utm_campaign=badger)
+
 Plugin allows you to run artisan commands by public URL. You can call this URL by `http`, `curl` or `wget`.
 
 Example: `http://www.domain.com/artisan/v1/cache/clear/secret-hash`
