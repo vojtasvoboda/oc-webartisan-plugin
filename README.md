@@ -60,6 +60,7 @@ for example
 ## TODO
 
 - [ ] pass Artisan to CommandRunner through constructor as Illuminate\Console\Application
+- [ ] set hash also by config (when you want to fire october:up on stage server)
 
 ## Contributing
 
