@@ -4,7 +4,7 @@
     "extra": {
         "installer-name": "webartisan"
     },
-    "description": "Reservations plugin for OctoberCMS",
+    "description": "Brands plugin for OctoberCMS",
     "homepage": "https://github.com/vojtasvoboda/oc-webartisan-plugin",
     "keywords": ["october", "plugin", "webartisan"],
     "license": "MIT",
