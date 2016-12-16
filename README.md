@@ -56,3 +56,11 @@ for example
 ## TODO
 
 - [ ] pass Artisan to CommandRunner through constructor as Illuminate\Console\Application
+
+## Contributing
+
+Please send Pull Request to the master branch.
+
+## License
+
+Web artisan plugin is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT) same as OctoberCMS platform.
