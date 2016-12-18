@@ -16,6 +16,10 @@ This could be useful:
 - when you **want to run commands** by services like IFTTT, Zapier, etc.
 - for deployment and automated tasks
 
+## Important
+
+It is highly recommend to use SSL (https://) when invoking commands with Web Artisan. The secret hash can be stolen if SSL is not used.
+
 ## Configuration
 
 Before call any command you have to set secret hash at **Backend > Settings > System > Web Artisan**. Run without 
