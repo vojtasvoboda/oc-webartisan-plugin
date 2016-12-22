@@ -9,6 +9,9 @@ class CommandRunner
     /** @var array $allowedCommands List of allowed commands loaded from Config. */
     protected $allowedCommands;
 
+    /** @var array $allowedPluginCommands List of allowed plugin commands. */
+    protected $allowedPluginCommands;
+
     /** @var Settings $settings */
     protected $settings;
 
@@ -21,6 +24,7 @@ class CommandRunner
     {
         $this->settings = $settings;
         $this->allowedCommands = Config::get('vojtasvoboda.webartisan::allowedCommands');
+        $this->allowedPluginCommands = Config::get('vojtasvoboda.webartisan::allowedPluginCommands');
     }
 
     /**
@@ -41,6 +45,31 @@ class CommandRunner
 
         // run command
         Artisan::call($command);
+
+        return true;
+    }
+
+    /**
+     * Run plugin command and return true if Ok or string with error.
+     *
+     * @param $command
+     * @param $plugin
+     * @param $hash
+     *
+     * @return bool|string
+     */
+    public function runForPlugin($command, $plugin, $hash)
+    {
+        // check command, plugin and hash
+        $check = $this->check($command, $hash, $plugin);
+        if ($check !== true) {
+            return $check;
+        }
+
+        // run command
+        Artisan::call($command, [
+            'name' => $plugin,
+        ]);
 
         return true;
     }
@@ -70,15 +99,21 @@ class CommandRunner
     /**
      * Check command and hash.
      *
-     * @param string $command
-     * @param string $hash
+     * @param string $command Command identifier.
+     * @param string $hash Security hash.
+     * @param string $plugin Plugin identifier (optional).
      *
      * @return bool|string
      */
-    private function check($command, $hash)
+    public function check($command, $hash, $plugin = null)
     {
-        // check whitelist
-        if (!in_array($command, $this->allowedCommands)) {
+        // check commands whitelist
+        if ($plugin === null && !in_array($command, $this->allowedCommands)) {
+            return 'This command is not allowed.';
+        }
+
+        // check plugin commands whitelist
+        if ($plugin !== null && !in_array($command, $this->allowedPluginCommands)) {
             return 'This command is not allowed.';
         }
 

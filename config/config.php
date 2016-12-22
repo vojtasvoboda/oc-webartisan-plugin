@@ -14,4 +14,8 @@ return [
         'schedule:run',
         'view:clear',
     ],
+
+    'allowedPluginCommands' => [
+        'plugin:refresh',
+    ],
 ];
