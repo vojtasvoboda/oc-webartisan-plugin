@@ -1,6 +1,6 @@
 # Web Artisan plugin for OctoberCMS
 
-[![Codacy](https://img.shields.io/codacy/5e98d8323ff64df59cb2be7f5db579f4)](https://www.codacy.com/app/vojtasvoboda/oc-webartisan-plugin)
+[![Codacy](https://img.shields.io/codacy/grade/5e98d8323ff64df59cb2be7f5db579f4.svg)](https://www.codacy.com/app/vojtasvoboda/oc-webartisan-plugin)
 [![Scrutinizer Coverage](https://img.shields.io/scrutinizer/g/vojtasvoboda/oc-webartisan-plugin.svg)](https://scrutinizer-ci.com/g/vojtasvoboda/oc-webartisan-plugin/?branch=master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vojtasvoboda/oc-webartisan-plugin/blob/master/LICENSE)
 
