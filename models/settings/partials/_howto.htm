@@ -1,0 +1,18 @@
+<?php
+$hash = !empty($model->hash) ? $model->hash : "&lt;token&gt;";
+?>
+
+<table style="margin-top: 14px;" class="table">
+    <tr><td><strong>auth:clear-resets</strong></td><td><?= Request::root() ?>/artisan/v1/auth/clear-reserts/<?= $hash ?></td></tr>
+    <tr><td><strong>cache:clear</strong></td><td><?= Request::root() ?>/artisan/v1/cache/clear/<?= $hash ?></td></tr>
+    <tr><td><strong>october:update</strong></td><td><?= Request::root() ?>/artisan/v1/october/update/<?= $hash ?></td></tr>
+    <tr><td><strong>plugin:refresh</strong></td><td><?= Request::root() ?>/artisan/v1/plugin/refresh/acme/site/<?= $hash ?></td></tr>
+    <tr><td><strong>queue:flush</strong></td><td><?= Request::root() ?>/artisan/v1/queue/flush/<?= $hash ?></td></tr>
+    <tr><td><strong>queue:forget</strong></td><td><?= Request::root() ?>/artisan/v1/queue/forget/<?= $hash ?></td></tr>
+    <tr><td><strong>queue:restart</strong></td><td><?= Request::root() ?>/artisan/v1/queue/restart/<?= $hash ?></td></tr>
+    <tr><td><strong>queue:retry</strong></td><td><?= Request::root() ?>/artisan/v1/queue/retry/<?= $hash ?></td></tr>
+    <tr><td><strong>queue:work</strong></td><td><?= Request::root() ?>/artisan/v1/queue/work/<?= $hash ?></td></tr>
+    <tr><td><strong>route:clear</strong></td><td><?= Request::root() ?>/artisan/v1/route/clear/<?= $hash ?></td></tr>
+    <tr><td><strong>schedule:run</strong></td><td><?= Request::root() ?>/artisan/v1/schedule/run/<?= $hash ?></td></tr>
+    <tr><td><strong>view:clear</strong></td><td><?= Request::root() ?>/artisan/v1/view/clear/<?= $hash ?></td></tr>
+</table>
