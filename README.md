@@ -16,6 +16,8 @@ This could be useful:
 - when you **want to run commands** by services like IFTTT, Zapier, etc.
 - for deployment and automated tasks
 
+Tested with the latest stable OctoberCMS build 419 (with Laravel 5.5).
+
 ## Important
 
 It is highly recommend to use SSL (https://) when invoking commands with Web Artisan. The secret hash can be stolen if SSL is not used.
