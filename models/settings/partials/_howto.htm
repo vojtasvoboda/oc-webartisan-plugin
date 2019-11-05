@@ -3,7 +3,7 @@ $hash = !empty($model->hash) ? $model->hash : "&lt;token&gt;";
 ?>
 
 <table style="margin-top: 14px;" class="table">
-    <tr><td><strong>auth:clear-resets</strong></td><td><?= Request::root() ?>/artisan/v1/auth/clear-reserts/<?= $hash ?></td></tr>
+    <tr><td><strong>auth:clear-resets</strong></td><td><?= Request::root() ?>/artisan/v1/auth/clear-resets/<?= $hash ?></td></tr>
     <tr><td><strong>cache:clear</strong></td><td><?= Request::root() ?>/artisan/v1/cache/clear/<?= $hash ?></td></tr>
     <tr><td><strong>october:update</strong></td><td><?= Request::root() ?>/artisan/v1/october/update/<?= $hash ?></td></tr>
     <tr><td><strong>plugin:refresh</strong></td><td><?= Request::root() ?>/artisan/v1/plugin/refresh/acme/site/<?= $hash ?></td></tr>
