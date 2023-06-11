@@ -2,6 +2,7 @@
 
 use Artisan;
 use Config;
+use Lang;
 use VojtaSvoboda\WebArtisan\Models\Settings;
 
 class CommandRunner
@@ -109,12 +110,12 @@ class CommandRunner
     {
         // check commands whitelist
         if ($plugin === null && !in_array($command, $this->allowedCommands)) {
-            return 'This command is not allowed.';
+            return Lang::get('vojtasvoboda.webartisan::lang.commandrunner.command_not_allowed');
         }
 
         // check plugin commands whitelist
         if ($plugin !== null && !in_array($command, $this->allowedPluginCommands)) {
-            return 'This command is not allowed.';
+            return Lang::get('vojtasvoboda.webartisan::lang.commandrunner.command_not_allowed');
         }
 
         // get hash
@@ -122,12 +123,12 @@ class CommandRunner
 
         // if hash not set
         if (strlen($localHash) < 16) {
-            return 'You have to set controll hash at backend settings and it should be at least 16 characters length.';
+            return Lang::get('vojtasvoboda.webartisan::lang.commandrunner.controll_hash');
         }
 
         // if hash doesn't match
         if ($hash != $localHash) {
-            return 'Wrong control hash. Check backend settings.';
+            return Lang::get('vojtasvoboda.webartisan::lang.commandrunner.wrong_hash');
         }
 
         return true;
