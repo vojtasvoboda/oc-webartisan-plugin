@@ -1,4 +1,6 @@
-<?php namespace VojtaSvoboda\WebArtisan;
+<?php
+
+namespace VojtaSvoboda\WebArtisan;
 
 use Backend;
 use System\Classes\PluginBase;
@@ -16,8 +18,8 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'Web Artisan',
-            'description' => 'Runs artisan commands by URL, curl or wget',
+            'name' => 'vojtasvoboda.webartisan::lang.plugin.name',
+            'description' => 'vojtasvoboda.webartisan::lang.plugin.label',
             'author' => 'Vojta Svoboda',
             'icon' => 'icon-forward',
         ];
@@ -28,11 +30,24 @@ class Plugin extends PluginBase
         return [
             'settings' => [
                 'category' => 'system::lang.system.categories.system',
-                'label' => 'Web Artisan',
-                'description' => 'Runs artisan commands by URL, curl or wget',
+                'label' => 'vojtasvoboda.webartisan::lang.settings.label',
+                'description' => 'vojtasvoboda.webartisan::lang.settings.description',
                 'icon' => 'icon-forward',
                 'class' => 'VojtaSvoboda\WebArtisan\Models\Settings',
                 'order' => 600,
+                'permissions' => [
+                    'vojtasvoboda.webartisan.access_settings',
+                ],
+            ],
+        ];
+    }
+
+    public function registerPermissions()
+    {
+        return [
+            'vojtasvoboda.webartisan.access_settings' => [
+                'tab' => 'vojtasvoboda.webartisan::lang.plugin.name',
+                'label' => 'vojtasvoboda.webartisan::lang.permissions.settings'
             ],
         ];
     }

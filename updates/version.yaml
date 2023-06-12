@@ -1,3 +1,4 @@
 1.0.1: First version of Web Artisan
 1.0.2: Add plugin:refresh command.
 1.0.3: Show available commands at backend.
+1.0.4: Add permissions on settings and lang support.

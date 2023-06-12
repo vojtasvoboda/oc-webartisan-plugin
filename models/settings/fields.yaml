@@ -1,10 +1,10 @@
 fields:
     hash:
-        label: Hash
+        label: vojtasvoboda.webartisan::lang.settings_fields.hash_label
         required: true
         type: text
-        comment: Secret hash for calling command by public URL. Hash should be at least 16 characters length.
+        comment: vojtasvoboda.webartisan::lang.settings_fields.hash_comment
     hint:
-        label: Available commands:
+        label: vojtasvoboda.webartisan::lang.settings_fields.hint_label
         type: partial
         path: $/vojtasvoboda/webartisan/models/settings/partials/_howto.htm
