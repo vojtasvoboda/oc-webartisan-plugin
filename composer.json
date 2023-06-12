@@ -1,5 +1,5 @@
 {
-    "name": "vojtasvoboda/oc-webartisan-plugin",
+    "name": "vojtasvoboda/webartisan-plugin",
     "type": "october-plugin",
     "extra": {
         "installer-name": "webartisan"
